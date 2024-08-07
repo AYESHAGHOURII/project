@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('images/1122222.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #020000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        header {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+
+        nav {
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #56ab2f;
+        }
+
+        nav button {
+            margin-left: 10px;
+            padding: 8px 16px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        nav button:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+
+        nav button:active {
+            background-color: #2b8340;
+        }
+
+        .container {
+            background: rgba(131, 182, 129, 0.9);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 900px;
+            margin-top: 80px;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h1 {
+            color: #0e0000;
+            margin-bottom: 20px;
+            animation: slideDown 1s ease-out;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .content img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 8px;
+            margin: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .content img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .content p {
+            color: #000000;
+            line-height: 1.6;
+            margin-top: 20px;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .content .team-imgs {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+            }
+            .content .team-imgs {
+                flex-direction: column;
+            }
+            .content img {
+                max-width: 100%;
+                margin: 10px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav {
+                flex-direction: column;
+                margin-right: 0;
+            }
+            nav a {
+                margin: 5px 0;
+            }
+            nav button {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">star orgnic farm</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="query.html">Query</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="product.html">Product</a>
+            <button onclick="window.location.href='contactus.html'">Contact Us</button>
+          
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>About Us</h1>
+        <div class="content">
+            <div class="team-imgs">
+                <img src="images/chef1.jpg" alt="Team Member 1" width="mx-auto" height="200">
+                <img src="images/chef3.jpg" alt="Team Member 2"width height="200" width="mx-auto">
+                
+            </div>
+            <p>Welcome to star organic We are a dedicated team of agricultural experts passionate about delivering high-quality produce through sustainable and innovative farming practices.</p>
+            <p>Our team brings together years of experience in the field of agriculture. We are committed to fostering a greener planet and ensuring the best quality for our customers.</p>
+            <p>Join us on our mission to make the world a better place through advanced farming techniques and eco-friendly practices!</p>
+        </div>
+    </div>
+
+     <!-- footer section starts -->
+     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        footer {
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #333;
+            margin-top: 20px;
+        }
+        footer h4 {
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        footer p {
+            margin: 5px 0;
+            color: #ccc;
+        }
+        footer a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        footer a:hover {
+            color: #ff5722;
+        }
+        #back-to-top {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        #back-to-top:hover {
+            background-color: #e64a19;
+            transform: scale(1.1);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .fade-in {
+            animation: fadeIn 2s;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Other content of the website -->
+
+<footer class="fade-in">
+    <div style="max-width: 1200px; margin: auto;">
+        <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 200px; margin: 10px;">
+                <h4>Contact Us</h4>
+                <p>123 Grocery St.</p>
+                <p>City, State, 12345</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Email: info@grocerystore.com</p>
+            </div>
+            <div style="flex: 1; min-width: 200px; margin: 10px;">
+                <h4>Customer Service</h4>
+                <p><a href="#">FAQs</a></p>
+                <p><a href="#">Shipping & Returns</a></p>
+                <p><a href="#">Privacy Policy</a></p>
+                <p><a href="#">Terms of Service</a></p>
+            </div>
+            <div style="flex: 1; min-width: 200px; margin: 10px;">
+                <h4>Follow Us</h4>
+                <p><a href="#">Facebook</a></p>
+                <p><a href="#">Twitter</a></p>
+                <p><a href="#">Instagram</a></p>
+                <p><a href="#">LinkedIn</a></p>
+            </div>
+        </div>
+        <div style="margin-top: 20px;">
+            <p>&copy; star organic farm. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<button id="back-to-top" onclick="scrollToTop()">Back to Top</button>
+
+<script>
+    // Show the "Back to Top" button when the user scrolls down
+    window.onscroll = function() {
+        var backToTopButton = document.getElementById('back-to-top');
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            backToTopButton.style.display = 'block';
+            backToTopButton.classList.add('fade-in');
+        } else {
+            backToTopButton.style.display = 'none';
+        }
+    };
+
+    // Scroll smoothly to the top of the page
+    function scrollToTop() {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+</script>
+
+    <!-- footer section ends -->
+
+</body>
+</html>

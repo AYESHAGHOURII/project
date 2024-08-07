@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('images/multicoloured-fruit-and-vegetables-in-a-black-bowl-royalty-free-image-1650038864.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .logo img {
+            width: 50px;
+            height: 50px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ff6600;
+        }
+        .container {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            margin: 20px;
+            border-radius: 10px;
+        }
+        .product {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .product-item {
+            margin: 10px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            width: calc(33% - 40px);
+            box-sizing: border-box;
+        }
+        .product-item:hover {
+            transform: scale(1.05);
+        }
+        .product-item img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .product-item h3 {
+            margin: 10px 0 0 0;
+        }
+        .product-item p {
+            margin: 5px 0 0 0;
+        }
+        .product-item button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #ff6600;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .product-item button:hover {
+            background-color: #e65c00;
+        }
+    </style>
+</head>
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+            position: relative;
+        }
+        .logo img {
+            height: 50px;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 16px;
+            position: relative;
+            padding: 10px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .menu-icon {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .menu-icon div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 4px 0;
+        }
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+            nav a {
+                margin-left: 0;
+                text-align: center;
+                padding: 10px 0;
+                border-top: 1px solid #444;
+                border-bottom: 1px solid #444;
+            }
+            .menu-icon {
+                display: flex;
+            }
+            .dropdown-content {
+                position: static;
+                box-shadow: none;
+            }
+            .dropdown-content a {
+                padding: 10px;
+            }
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/993a8d8d-50c9-4464-82e1-517bc8c362ad.png" alt="Logo" height="300" width="mx-auto">
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="query.html">Query</a>
+            <a href="aboutus.html">About Us</a>
+            <div class="dropdown">
+                <a href="product.html">Product</a>
+                <div class="dropdown-content">
+                   
+             <li><a class="" href="fruit.html">FRUITS</a></li>
+              <li><a class="" href="vegatables.html">vegatables</a></li>
+              <li><a class="" href="agroproducts.html">agroproducts</a></li>
+              <li><a class="" href="riceproduct.html">riceproduct</a></li>
+              <li><a class="" href="nutritiouscereals.html">cereals</a></li>
+              <li><a class="" href="pulses.html">cereals</a></li>
+                </div>
+            </div>
+            <a href="contactus.html">Contact Us</a>
+            
+
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Our Products</h1>
+        <div class="product">
+            <div class="product-item">
+                <img src="images/agro 2.png" alt="Product 1">
+                <h3>Product 1</h3>
+                <p></p>
+                <button onclick="alert('Product 1 added to cart')">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="images/agro 4.png" alt="Product 2">
+                <h3>Product 2</h3>
+                <p></p>
+                <button onclick="alert('Product 2 added to cart')">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="images/agro.png" alt="Product 3">
+                <h3>Product 3</h3>
+                <p></p>
+                <button onclick="alert('Product 3 added to cart')">Add to Cart</button>
+            </div>
+          
+           
+    </div>
+</body>
+</html>
